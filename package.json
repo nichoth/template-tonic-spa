@@ -12,9 +12,9 @@
     "build": "mkdir -p public && rm -rf ./public/* && npm run copy:prod",
     "build-css": "postcss src/_style.css --output src/style.css",
     "watch-css": "postcss src/_style.css --output src/style.css --watch",
-    "copy:prod": "npm run copy && cp ./src/* ./public",
+    "copy:prod": "npm run copy && cp ./src/*.{css,js,html} ./public",
     "preversion": "check-deps . 1 && npm run lint",
-    "postversion": "git push && git push --tags && npm publish",
+    "postversion": "git push && git push --tags",
     "test": "node ./test/test.js | tap-arc"
   },
   "dependencies": {
