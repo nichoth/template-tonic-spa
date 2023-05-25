@@ -1,5 +1,5 @@
-# template js
-A template for *dependency* JS modules -- modules intended to be a dependency of application code.
+# template tonic
+A template showing an example of [tonic](https://tonicframework.dev/) + client-side routing.
 
 ## use
 1. Use the *template* button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
@@ -7,10 +7,6 @@ A template for *dependency* JS modules -- modules intended to be a dependency of
 2. Edit the source code in `src/index.mjs`.
 
 ## featuring
-* compile the source to both ESM and CJS format, and put compiled files in `dist`.
-* ignore `dist` in git, but don't ignore it in npm. That way we don't commit any compiled code to git, but it is available to consumers.
-* use npm's `prepublishOnly` hook to compile the code before publishing to npm.
-* use `exports` field in `package.json` to make sure the right format is used by consumers.
-* `preversion` npm hook -- use `@nichoth/check-max-deps` to validate the number of dependencies, and lint via `standardx`.
+* `preversion` npm hook -- use [@nichoth/check-max-deps](https://github.com/nichoth/check-max-deps) to validate the number of dependencies, and lint via `standardx`.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
-* use a githook via [git-hooks-plus](https://www.npmjs.com/package/git-hooks-plus) to lint the code before pushing
+* type checking via a [jsconfig](https://code.visualstudio.com/docs/languages/jsconfig) file

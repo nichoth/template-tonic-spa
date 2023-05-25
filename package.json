@@ -4,27 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "//start": "vite",
     "start": "npm run restart && npm run copy && npm run serve",
     "serve": "live-server --port=8888 ./public",
     "lint": "standardx -v",
     "build": "npm run restart && npm run copy",
     "copy": "cp ./src/* node_modules/@socketsupply/tonic/dist/tonic.min.js ./public",
     "restart": "mkdir -p ./public && rm -rf ./public/*",
-    "preversion": "check-deps . 1 && npm run lint",
+    "preversion": "check-deps . 38 && npm run lint",
     "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build",
     "test": "node ./test/test.js | tap-arc"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./*": {
-      "import": "./dist/*.js",
-      "require": "./dist/*.cjs"
-    }
   },
   "dependencies": {
     "@socketsupply/tonic": "^15.1.1"
