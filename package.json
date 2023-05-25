@@ -5,20 +5,22 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run copy && concurrently --kill-others \"npm run serve\" \"npm run watch-css\"",
+    "start": "npm run copy && npm run build-js && concurrently --kill-others \"npm run serve\" \"npm run watch-css\"",
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js ./src",
-    "serve": "live-server --entry-file=src/index.html --port=8888 --watch=src ./src",
+    "build-js": "esbuild src/index.js --bundle --format=esm --outdir=public --keep-names",
+    "serve": "live-server --entry-file=public/index.html --port=8888 --watch=public ./public",
     "lint": "standardx -v",
-    "build": "mkdir -p public && rm -rf ./public/* && npm run copy:prod",
-    "build-css": "postcss src/_style.css --output src/style.css",
-    "watch-css": "postcss src/_style.css --output src/style.css --watch",
+    "build": "mkdir -p public && rm -rf ./public/* && npm run build-css && npm run copy:prod",
+    "build-css": "postcss src/style/style.css --output public/style.css",
+    "watch-css": "postcss src/style/style.css --output public/style.css --watch",
     "copy:prod": "npm run copy && cp ./src/*.{css,js,html} ./public",
-    "preversion": "check-deps . 1 && npm run lint",
+    "preversion": "check-deps . 4 && npm run lint",
     "postversion": "git push && git push --tags",
     "test": "node ./test/test.js | tap-arc"
   },
   "dependencies": {
-    "@socketsupply/tonic": "^15.1.1"
+    "@socketsupply/tonic": "^15.1.1",
+    "route-event": "^4.1.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
@@ -32,7 +34,8 @@
     "postcss-nesting": "^11.2.2",
     "standardx": "^7.0.0",
     "tap-arc": "^0.3.5",
-    "tapzero": "^0.6.1"
+    "tapzero": "^0.6.1",
+    "terser": "^5.17.6"
   },
   "standardx": {
     "ignore": [

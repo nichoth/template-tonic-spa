@@ -1,5 +1,6 @@
 // @ts-check
 import Tonic from '@socketsupply/tonic'
+import Route from 'route-event'
 
 class MyCount extends Tonic {
     constructor () {
@@ -24,12 +25,21 @@ class MyCount extends Tonic {
 class TheApp extends Tonic {
     constructor () {
         super()
-        this.state = { route: '/' }
+        const { location } = window
+        this.state = {
+            route: (location.pathname + location.search)
+        }
+
+        const route = Route()
+        route((path) => {
+            this.state.route = path
+        })
     }
 
     render () {
         return this.html`
             <div>Hello, World.</div>
+            <p>the current route is: ${this.state.route}</p>
         `
     }
 }
