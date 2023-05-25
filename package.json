@@ -3,16 +3,18 @@
   "description": "A template for tonic apps",
   "version": "0.0.0",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "start": "npm run restart && npm run copy && npm run serve",
-    "serve": "live-server --port=8888 ./public",
+    "start": "npm run copy && npm run serve",
+    "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js ./src",
+    "serve": "live-server --entry-file=src/index.html --port=8888 --watch=src ./src",
     "lint": "standardx -v",
-    "build": "npm run restart && npm run copy",
-    "copy": "cp ./src/* node_modules/@socketsupply/tonic/dist/tonic.min.js ./public",
-    "restart": "mkdir -p ./public && rm -rf ./public/*",
-    "preversion": "check-deps . 38 && npm run lint",
+    "build": "mkdir -p public && rm -rf ./public/* && npm run copy:prod",
+    "build-css": "postcss src/_style.css --output src/style.css",
+    "watch-css": "postcss src/_style.css --output src/style.css --watch",
+    "copy:prod": "npm run copy && cp ./src/* ./public",
+    "preversion": "check-deps . 1 && npm run lint",
     "postversion": "git push && git push --tags && npm publish",
-    "prepublishOnly": "npm run build",
     "test": "node ./test/test.js | tap-arc"
   },
   "dependencies": {
@@ -23,7 +25,9 @@
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@nichoth/check-max-deps": "0.0.2",
     "esbuild": "^0.15.11",
-    "live-server": "^1.2.2",
+    "live-server": "^1.1.0",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
     "postcss-nesting": "^11.2.2",
     "standardx": "^7.0.0",
     "tap-arc": "^0.3.5",
@@ -31,10 +35,9 @@
   },
   "standardx": {
     "ignore": [
-      "dist/*"
+      "public/*"
     ]
   },
-  "main": "src/index.js",
   "directories": {
     "test": "test"
   },
