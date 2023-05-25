@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run copy && npm run build-js && concurrently --kill-others \"npm run serve\" \"npm run watch-css\"",
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js ./src",
-    "build-js": "esbuild src/index.js --bundle --format=esm --outdir=public --keep-names",
+    "build-js": "esbuild src/index.js --bundle --format=esm --external:@socketsupply/tonic --outdir=public --keep-names",
     "serve": "live-server --entry-file=public/index.html --port=8888 --watch=public ./public",
     "lint": "standardx -v",
     "build": "mkdir -p public && rm -rf ./public/* && npm run build-css && npm run copy:prod",
