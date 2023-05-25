@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run copy && npm run serve",
+    "start": "npm run copy && concurrently --kill-others \"npm run serve\" \"npm run watch-css\"",
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js ./src",
     "serve": "live-server --entry-file=src/index.html --port=8888 --watch=src ./src",
     "lint": "standardx -v",
@@ -24,6 +24,7 @@
     "@babel/eslint-parser": "7.19.1",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@nichoth/check-max-deps": "0.0.2",
+    "concurrently": "^8.0.1",
     "esbuild": "^0.15.11",
     "live-server": "^1.1.0",
     "postcss": "^8.4.23",

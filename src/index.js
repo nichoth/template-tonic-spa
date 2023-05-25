@@ -16,10 +16,23 @@ class MyCount extends Tonic {
 
     render () {
         return this.html`
-            <div>Hello, World.</div>
             <button>${this.state.counter.toString()}</button>
         `
     }
 }
 
+class TheApp extends Tonic {
+    constructor () {
+        super()
+        this.state = { route: '/' }
+    }
+
+    render () {
+        return this.html`
+            <div>Hello, World.</div>
+        `
+    }
+}
+
 Tonic.add(MyCount)
+Tonic.add(TheApp)
