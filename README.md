@@ -11,5 +11,5 @@ An example of [tonic](https://tonicframework.dev/) + client-side routing.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * type checking via a [jsconfig](https://code.visualstudio.com/docs/languages/jsconfig) file
 
-### no build tool
-We are depending on the browser resolving ES modules.
+### ESM
+We are depending on the browser resolving ES modules. 

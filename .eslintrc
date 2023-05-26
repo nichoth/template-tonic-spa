@@ -12,6 +12,7 @@
       }
     ],
     "indent": [ "error", 4 ],
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "quotes": [{ "allowTemplateLiterals": true }]
   }
 }

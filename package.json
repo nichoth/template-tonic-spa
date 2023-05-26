@@ -6,19 +6,19 @@
   "main": "src/index.js",
   "scripts": {
     "start": "npm run copy && npm run build-js && concurrently --kill-others \"npm run serve\" \"npm run watch-css\"",
-    "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js ./src",
+    "copy": "cp ./src/index.html node_modules/@socketsupply/tonic/dist/tonic.min.js ./public",
     "build-js": "esbuild src/index.js --bundle --format=esm --external:@socketsupply/tonic --outdir=public --keep-names",
     "serve": "live-server --entry-file=public/index.html --port=8888 --watch=public ./public",
     "lint": "standardx -v",
-    "build": "mkdir -p public && rm -rf ./public/* && npm run build-css && npm run copy:prod",
+    "build": "mkdir -p public && rm -rf ./public/* && npm run build-css && npm run build-js && npm run copy",
     "build-css": "postcss src/style/style.css --output public/style.css",
     "watch-css": "postcss src/style/style.css --output public/style.css --watch",
-    "copy:prod": "npm run copy && cp ./src/*.{css,js,html} ./public",
     "preversion": "check-deps . 4 && npm run lint",
     "postversion": "git push && git push --tags",
     "test": "node ./test/test.js | tap-arc"
   },
   "dependencies": {
+    "@nichoth/routes": "^3.0.6",
     "@socketsupply/tonic": "^15.1.1",
     "route-event": "^4.1.7"
   },
