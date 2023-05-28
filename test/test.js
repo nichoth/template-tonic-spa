@@ -1,7 +1,6 @@
 // @ts-check
-'use strict'
 import { test } from 'tapzero'
 
 test('find an element', async t => {
-    t.ok('example', 'example test')
+    t.ok(document.querySelector('h1'), 'should find an h1')
 })
