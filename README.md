@@ -69,4 +69,4 @@ This pairs with our html file:
 ```
 
 ## test
-Tests are broken due to [a known issue](https://github.com/nichoth/tap-ssc/issues/9) in [ssc](https://github.com/socketsupply/socket)/[tap-ssc](https://github.com/nichoth/tap-ssc)
+Tests are broken due to [a known issue](https://github.com/nichoth/tap-ssc/issues/9) in [tap-ssc](https://github.com/nichoth/tap-ssc)
