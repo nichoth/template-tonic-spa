@@ -6,19 +6,12 @@ import { routes, createRouter } from './routes.js'
 class MyCount extends Tonic {
     constructor () {
         super()
-        this.state.counter = 0
-    }
-
-    // method name corresponds to the DOM event name
-    click (ev) {
-        ev.preventDefault()
-        this.state.counter++
-        this.reRender()
+        this.state = { counter: 0 }
     }
 
     render () {
         return this.html`
-            <button>${this.state.counter.toString()}</button>
+            <button>${this.props.count.toString()}</button>
         `
     }
 }
@@ -28,39 +21,39 @@ class TheApp extends Tonic {
         super()
         const { location } = window
         this.state = {
-            route: (location.pathname + location.search)
+            route: (location.pathname + location.search),
+            count: 0
         }
 
         this.router = createRouter()
         const onRoute = Route()
         onRoute((path) => {
-            console.log('on route', path)
             if (path !== this.state.route) {
-                console.log('not eq', path, this.state.route)
                 this.state.route = path
                 this.reRender()
             }
         })
     }
 
+    click (ev) {
+        if (!Tonic.match(ev.target, 'button')) return
+        ev.preventDefault()
+        this.state.count++
+        this.reRender()
+    }
+
     render () {
         const match = this.router.match(this.state.route)
-
-        if (!match) return this.html`<h1>404</h1>`
+        if (!match) return this.html`<h1 class="404">404</h1>`
 
         const view = match.action(match)
-        console.log('viewwwwww', view)
-
-
         const child = Tonic.getTagName(view.name)
-
-        console.log('route tagggggg', child)
 
         return this.html`
             <div>Hello, World.</div>
             <ul>
                 <li>
-                    <a href="/aaa">aaa</a>
+                    <a href="/aaa">aaaaa</a>
                 </li>
                 <li>
                     <a href="/bbb">bbb</a>
@@ -69,6 +62,8 @@ class TheApp extends Tonic {
                     <a href="/ccc">ccc</a>
                 </li>
             </ul>
+
+            <my-count id="count" count=${this.state.count}></my-count>
 
             <p>the current route is: ${this.state.route}</p>
 

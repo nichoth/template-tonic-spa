@@ -26,7 +26,10 @@ class RouteCcc extends Tonic {
 }
 
 export const routes = [
-    RouteHome
+    RouteHome,
+    RouteAaa,
+    RouteBbb,
+    RouteCcc
 ]
 
 export function createRouter () {

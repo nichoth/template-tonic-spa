@@ -13,6 +13,6 @@
     ],
     "indent": [ "error", 4 ],
     "comma-dangle": "off",
-    "quotes": [{ "allowTemplateLiterals": true }]
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
   }
 }
