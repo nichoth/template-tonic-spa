@@ -6,6 +6,9 @@ An example of [tonic](https://tonicframework.dev/) + client-side routing.
 
 2. Edit the source code in `src/index.js`.
 
+## see a demonstration
+[template-tonic-spa.netlify.app](https://template-tonic-spa.netlify.app/)
+
 ## featuring
 * `preversion` npm hook -- use [@nichoth/check-max-deps](https://github.com/nichoth/check-max-deps) to validate the number of dependencies, and lint.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
