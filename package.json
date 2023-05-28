@@ -23,7 +23,6 @@
     "@babel/eslint-parser": "7.19.1",
     "@nichoth/check-max-deps": "0.0.2",
     "@nichoth/tap-ssc": "^0.4.0",
-    "concurrently": "^8.0.1",
     "esbuild": "^0.15.11",
     "postcss-nesting": "^11.2.2",
     "standardx": "^7.0.0",
