@@ -7,7 +7,7 @@ An example of [tonic](https://tonicframework.dev/) + client-side routing.
 2. Edit the source code in `src/index.js`.
 
 ## featuring
-* `preversion` npm hook -- use [@nichoth/check-max-deps](https://github.com/nichoth/check-max-deps) to validate the number of dependencies, and lint via `standardx`.
+* `preversion` npm hook -- use [@nichoth/check-max-deps](https://github.com/nichoth/check-max-deps) to validate the number of dependencies, and lint.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * type checking via a [jsconfig](https://code.visualstudio.com/docs/languages/jsconfig) file
 
