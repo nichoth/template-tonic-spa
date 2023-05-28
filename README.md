@@ -11,19 +11,19 @@ An example of [tonic](https://tonicframework.dev/) + client-side routing.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * type checking via a [jsconfig](https://code.visualstudio.com/docs/languages/jsconfig) file
 
-### Start a local development server
+## Start a local development server
 ```bash
 npm start
 ```
 
-### build
+## build
 Create a static website in `public`
 
 ```bash
 npm run build
 ```
 
-### structure
+## structure
 This uses client side routing and the single-page-app pattern. You would want to serve the same html for any route that is requested. 
 
 We are using application state in the root component
@@ -41,10 +41,10 @@ And passing state to a child component as a prop:
 
 This means that the state persists between route changes.
 
-### vite
+## vite
 This uses [vite](https://vitejs.dev/) as a development server. This makes it easy to develop as a single page app.
 
-### ESM
+## ESM
 We are depending on the browser resolving ES modules. The module `@socketsupply/tonic` is marked as external in the vite config:
 
 ```js

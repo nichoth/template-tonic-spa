@@ -5,7 +5,6 @@
   "scripts": {
     "start": "vite",
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js src/robots.txt ./public",
-    "build-js": "esbuild src/index.js --bundle --format=esm --external:@socketsupply/tonic --outdir=public --keep-names",
     "lint": "standardx -v",
     "build": "mkdir -p public && rm -rf ./public/* && npm run copy && vite build",
     "build-css": "postcss src/style/style.css --output public/style.css",
