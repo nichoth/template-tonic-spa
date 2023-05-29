@@ -7,8 +7,6 @@
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js src/robots.txt ./public",
     "lint": "standardx -v",
     "build": "mkdir -p public && rm -rf ./public/* && npm run copy && vite build",
-    "build-css": "postcss src/style/style.css --output public/style.css",
-    "watch-css": "postcss src/style/style.css --output public/style.css --watch",
     "preversion": "check-deps . 5 && npm run lint",
     "postversion": "git push && git push --tags",
     "test": "esbuild --bundle --platform=browser --format=esm test/test.js | tap-ssc --html=test/index.html | tap-arc"
