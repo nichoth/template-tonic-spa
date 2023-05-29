@@ -4,11 +4,6 @@ import Route from 'route-event'
 import { routes, createRouter } from './routes.js'
 
 class MyCount extends Tonic {
-    constructor () {
-        super()
-        this.state = { counter: 0 }
-    }
-
     render () {
         return this.html`
             <button>${this.props.count.toString()}</button>
