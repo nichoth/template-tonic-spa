@@ -67,7 +67,7 @@ class TheApp extends Tonic {
 
             <p>the current route is: ${this.state.route}</p>
 
-            <${child} />
+            <${child}></${child}>
         `
     }
 }
