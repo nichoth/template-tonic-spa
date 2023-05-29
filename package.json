@@ -14,7 +14,7 @@
     "test": "esbuild --bundle --platform=browser --format=esm test/test.js | tap-ssc --html=test/index.html | tap-arc"
   },
   "dependencies": {
-    "@nichoth/routes": "^3.0.6",
+    "@nichoth/routes": "^3.0.7",
     "@socketsupply/tonic": "^15.1.1",
     "route-event": "^4.1.8"
   },
