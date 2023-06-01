@@ -48,7 +48,7 @@ This means that the state persists between route changes.
 This uses [vite](https://vitejs.dev/) as a development server. This makes it easy to develop as a single page app.
 
 ## ESM
-We are depending on the browser resolving ES modules. [See an article about import maps](https://www.honeybadger.io/blog/import-maps/). The module `@socketsupply/tonic` is marked as external in the vite config:
+We are depending on the browser resolving ES modules. The module `@socketsupply/tonic` is marked as external in the vite config:
 
 ```js
 {
@@ -70,6 +70,8 @@ This pairs with our html file:
     }
 </script>
 ```
+
+[See an article about import maps](https://www.honeybadger.io/blog/import-maps/) 
 
 ## test
 Tests are broken due to [a known issue](https://github.com/nichoth/tap-ssc/issues/9) in [tap-ssc](https://github.com/nichoth/tap-ssc)
