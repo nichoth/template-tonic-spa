@@ -39,7 +39,7 @@ this.state = {
 
 And passing state to a child component as a prop:
 ```js
-`<my-count id="count" count=${this.state.count}></my-count>`
+this.html`<my-count id="count" count=${this.state.count}></my-count>`
 ```
 
 This means that the state persists between route changes.
