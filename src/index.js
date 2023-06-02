@@ -42,7 +42,7 @@ class TheApp extends Tonic {
         if (!match) return this.html`<h1 class="404">404</h1>`
 
         const view = match.action(match)
-        const child = Tonic.getTagName(view.name)
+        const tag = Tonic.getTagName(view.name)
 
         return this.html`
             <div>Hello, World.</div>
@@ -62,7 +62,7 @@ class TheApp extends Tonic {
 
             <p>the current route is: ${this.state.route}</p>
 
-            <${child}></${child}>
+            <${tag}></${tag}>
         `
     }
 }
