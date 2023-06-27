@@ -2,6 +2,7 @@
   "version": "0.0.0",
   "type": "module",
   "main": "src/index.js",
+  "private": true,
   "scripts": {
     "start": "vite",
     "copy": "cp node_modules/@socketsupply/tonic/dist/tonic.min.js src/robots.txt ./public",
