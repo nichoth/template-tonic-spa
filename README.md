@@ -6,6 +6,12 @@ An example of [tonic](https://tonicframework.dev/) + client-side routing.
 
 2. Edit the source code in `src/index.js`.
 
+3. start a local server
+
+```bash
+npm start
+```
+
 ## see a demonstration
 [template-tonic-spa.netlify.app](https://template-tonic-spa.netlify.app/)
 
