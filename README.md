@@ -33,7 +33,7 @@ npm run build
 ```
 
 ## structure
-This uses client side routing and the single-page-app pattern. You would want to serve the same html for any route that is requested. 
+This uses client side routing and the [single-page-app pattern](https://developer.mozilla.org/en-US/docs/Glossary/SPA). You would want to serve the same html for any route that is requested. 
 
 We are using application state in the root component
 ```js

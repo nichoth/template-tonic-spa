@@ -3,9 +3,9 @@
     "target": "es2020",
     "lib": ["es2020", "dom"],
     "noEmit": true,
-    "module": "esnext",
+    "module": "NodeNext",
     "strict": false,
-    "moduleResolution": "node16",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
