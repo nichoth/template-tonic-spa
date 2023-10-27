@@ -43,7 +43,7 @@ this.state = {
 }
 ```
 
-And passing state to a child component as a prop:
+And passing state to child components as props:
 ```js
 this.html`<my-count id="count" count=${this.state.count}></my-count>`
 ```
