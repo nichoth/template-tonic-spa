@@ -29,7 +29,7 @@ export default defineConfig({
         outDir: '../public',
         sourcemap: 'inline',
         rollupOptions: {
-            external: ['@socketsupply/tonic']
+            external: ['@nichoth/tonic']
         }
     }
 })

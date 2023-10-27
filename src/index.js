@@ -1,5 +1,5 @@
 // @ts-check
-import Tonic from '@socketsupply/tonic'
+import Tonic from '@nichoth/tonic'
 import Route from 'route-event'
 import { routes, createRouter } from './routes.js'
 

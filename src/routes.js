@@ -1,4 +1,4 @@
-import Tonic from '@socketsupply/tonic'
+import Tonic from '@nichoth/tonic'
 import Router from '@nichoth/routes'
 
 class RouteHome extends Tonic {
