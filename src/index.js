@@ -5,7 +5,7 @@ import { createDebug } from '@nichoth/debug'
 import { routes, createRouter } from './routes.js'
 
 const debug = createDebug('example')
-const debugEvents = createDebug('events')
+const debugEvents = createDebug('event')
 
 debug('logging things')
 
