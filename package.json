@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
     "@nichoth/check-max-deps": "0.0.2",
+    "@nichoth/debug": "^0.1.4",
     "@nichoth/tapzero": "^0.8.0",
     "esbuild": "^0.15.11",
     "postcss-nesting": "^11.2.2",

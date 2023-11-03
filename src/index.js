@@ -1,7 +1,13 @@
 // @ts-check
 import Tonic from '@nichoth/tonic'
 import Route from 'route-event'
+import { createDebug } from '@nichoth/debug'
 import { routes, createRouter } from './routes.js'
+
+const debug = createDebug('example')
+const debugEvents = createDebug('events')
+
+debug('logging things')
 
 class MyCount extends Tonic {
     render () {
@@ -34,6 +40,7 @@ class TheApp extends Tonic {
         if (!Tonic.match(ev.target, 'button')) return
         ev.preventDefault()
         this.state.count++
+        debugEvents('click', this.state.count)
         this.reRender()
     }
 
