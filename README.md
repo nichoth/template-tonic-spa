@@ -80,4 +80,6 @@ This pairs with our html file:
 [See an article about import maps](https://www.honeybadger.io/blog/import-maps/) 
 
 ## test
-Tests are broken due to [a known issue](https://github.com/nichoth/tap-ssc/issues/9) in [tap-ssc](https://github.com/nichoth/tap-ssc)
+```sh
+npm test
+```
