@@ -28,10 +28,15 @@ class TheApp extends Tonic {
 
         this.router = createRouter()
         const onRoute = Route()
-        onRoute((path) => {
+        onRoute((path, ev) => {
             if (path !== this.state.route) {
                 this.state.route = path
                 this.reRender()
+                // handle URL change like a browser
+                if (ev.popstate) {
+                    return window.scrollTo(ev.scrollX, ev.scrollY)
+                }
+                window.scrollTo(0, 0)
             }
         })
     }
