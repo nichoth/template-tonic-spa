@@ -24,7 +24,7 @@
     "@bicycle-codes/tapzero": "^0.10.3",
     "@nichoth/check-max-deps": "0.0.3",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.22.0",
+    "esbuild": "^0.23.0",
     "postcss-nesting": "^12.0.2",
     "standardx": "^7.0.0",
     "tap-arc": "^1.2.2",
