@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.24.7",
-    "@bicycle-codes/debug": "^0.6.10",
+    "@bicycle-codes/debug": "^0.6.12",
     "@bicycle-codes/tapzero": "^0.10.3",
     "@nichoth/check-max-deps": "0.0.3",
     "auto-changelog": "^2.4.0",
