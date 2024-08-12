@@ -16,7 +16,7 @@
   "dependencies": {
     "@nichoth/routes": "^4.0.1",
     "@nichoth/tonic": "^15.3.4",
-    "route-event": "^5.2.2"
+    "route-event": "^6.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.25.1",
