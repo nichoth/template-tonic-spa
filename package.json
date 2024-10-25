@@ -19,7 +19,7 @@
     "route-event": "^6.0.3"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.25.8",
+    "@babel/eslint-parser": "7.25.9",
     "@bicycle-codes/debug": "^0.6.16",
     "@bicycle-codes/tapzero": "^0.10.5",
     "@nichoth/check-max-deps": "0.0.3",
