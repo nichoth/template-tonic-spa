@@ -1,5 +1,5 @@
-import Tonic from '@nichoth/tonic'
-import Router from '@nichoth/routes'
+import Tonic from '@substrate-system/tonic'
+import Router from '@substrate-system/routes'
 
 class RouteHome extends Tonic {
     render () {

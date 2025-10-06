@@ -1,7 +1,7 @@
 // @ts-check
-import Tonic from '@nichoth/tonic'
+import Tonic from '@substrate-system/tonic'
 import Route from 'route-event'
-import { createDebug } from '@bicycle-codes/debug'
+import { createDebug } from '@substrate-system/debug'
 import { routes, createRouter } from './routes.js'
 
 const debug = createDebug('example')
