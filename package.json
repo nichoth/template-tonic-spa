@@ -19,7 +19,7 @@
     "route-event": "^6.0.9"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.28.4",
+    "@babel/eslint-parser": "7.28.5",
     "@nichoth/check-max-deps": "0.0.3",
     "@substrate-system/debug": "^0.9.24",
     "@substrate-system/tapzero": "^0.10.15",
